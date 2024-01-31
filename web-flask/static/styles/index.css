@@ -16,7 +16,7 @@ a{
     /* color: white; */
 }
 .white{
-color:white;
+color:black;
 }
 .container{
     width:80%;
@@ -133,7 +133,7 @@ main::before{
 content: ' ';
 position:absolute;
 inset:0;
-background-color: rgb(15, 25, 37, 0.9);
+background-color: rgb(15, 25, 37, 0.5);
 z-index: -1;
 }
 video{
@@ -154,25 +154,82 @@ border-radius: 2px solid green;
    
 
 }
-.project-title
+.gray
 {
-margin: 0px auto;
-
-    font-size:3em;
+    color:chocolate;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+.project-title{
+    font-size:2em;
+    color:#474F7A;
+    text-align: center;
+  
 }
 .big-form
 {
 
     
     background-color: white;
-    width:80%;
+    width:75%;
 margin:0px auto;
     height:500px;
     
-    margin-top: 2em;
+    margin-top: 3em;
     border-radius:5px ;
     box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: absolute;
+    left:10%;
+    right:10%;
+    padding: 1em;
+}
+.form-frame
+{
+    justify-content:space-between;
+    
+}
+input{
+    border: none;
+    width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+}
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+.instruction,
+.form{
 
+    width:43%;
+    height:fit-content;
+    box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    
+}
+.form{
+    height: 380px;
+}
+.instruction p,
+.form p{
+    font-size: 2rem;
+    text-align: justify;
 }
 /* 
 media query for mobile version */
@@ -244,5 +301,30 @@ padding-bottom: 0px;
     button:hover{
         /* display: none; */
     }
+    .big-form,
+    .form
+    {
+        height: fit-content;
+    }
+    .form-frame
+{
    
+    flex-direction: column;
+   align-items: center;
+    
+}
+.instruction,
+.form{
+    width:80%;
+   
+}
+.form
+{
+    margin-top: 1em;
+}
+ 
+.project-title{
+   
+    justify-content: start;
+}
 }

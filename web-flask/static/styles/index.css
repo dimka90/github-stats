@@ -127,21 +127,24 @@ z-index: 3;
 height:400px;
 width:100%;
 background-color:blue;
+
 }
-m{
+main::before{
 content: ' ';
 position:absolute;
 inset:0;
-background-color: hsla(180, 4%, 5%, 0.6);
+background-color: hsla(180, 4%, 5%, 0.9);
 z-index: -1;
-hight:100%;
 }
-iframe{
-position:absolute;
-object-fit:cover;
+video{
+position: absolute;
+width: 100%;
 top:0;
-left:0;
-z-index:-2;
+left: 0;
+height: 100%;
+object-fit: cover;
+z-index: -2;
+border-radius: 2px solid green;
 }
 .learn-more button a{
     color:white;

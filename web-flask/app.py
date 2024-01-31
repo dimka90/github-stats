@@ -11,14 +11,17 @@ def index():
 def get_github_user(username):
     # Url for getting Any valid github user
     url = 'https://api.github.com/users/{}'.format(username)
-    # using a with context manager to access the personal token
-    # to be use for authentication
-    with open("token") as file:
-        personal_token = file.read()
-    return personal_token
-    user_name = "githubname"
-    headers = {""}
-    data = request.post()
-    return "still processing"
+    response = requests.get(url)
+    if response.status_code == 200:
+        user_data = response.json()
+        data = {"Username" : user_data['login'],
+                "Name": user_data["name"],
+                "Location": user_data["location"],
+                "Bio": user_data['bio'],
+                "Followers": user_data['followers']
+                }
+        return  data
+    else:
+        return "still processing"
 if __name__ == "__main__":
-    app.run()
+    app.run(host="127.0.0.1", port="5000", debug=True)

@@ -133,7 +133,7 @@ main::before{
 content: ' ';
 position:absolute;
 inset:0;
-background-color: hsla(180, 4%, 5%, 0.9);
+background-color: rgb(15, 25, 37, 0.9);
 z-index: -1;
 }
 video{
@@ -149,7 +149,31 @@ border-radius: 2px solid green;
 .learn-more button a{
     color:white;
 }
+.main-section
+{
+   
 
+}
+.project-title
+{
+margin: 0px auto;
+
+    font-size:3em;
+}
+.big-form
+{
+
+    
+    background-color: white;
+    width:80%;
+margin:0px auto;
+    height:500px;
+    
+    margin-top: 2em;
+    border-radius:5px ;
+    box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
 /* 
 media query for mobile version */
 

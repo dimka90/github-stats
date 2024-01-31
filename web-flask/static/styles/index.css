@@ -15,7 +15,9 @@ body{
 a{
     /* color: white; */
 }
-
+.white{
+color:white;
+}
 .container{
     width:80%;
     max-width: 1500px;
@@ -119,6 +121,28 @@ box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 5px;
 
 }
+main {
+position: relative;
+z-index: 3;
+height:400px;
+width:100%;
+background-color:blue;
+}
+m{
+content: ' ';
+position:absolute;
+inset:0;
+background-color: hsla(180, 4%, 5%, 0.6);
+z-index: -1;
+hight:100%;
+}
+iframe{
+position:absolute;
+object-fit:cover;
+top:0;
+left:0;
+z-index:-2;
+}
 .learn-more button a{
     color:white;
 }
@@ -141,6 +165,7 @@ media query for mobile version */
         /* color:white; */
     }
    .primary-navigation{
+      z-index:99;
       background-color: hsla(180, 4%, 5%, 0.9);
       /* backdrop-filter: blur(11rem); */
       position: fixed;

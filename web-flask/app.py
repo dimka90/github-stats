@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import requests
 app = Flask(__name__)
 # Route for index page
@@ -7,10 +7,11 @@ def index():
      return render_template("index.html")
 # This route gets the user information using the github api
 # to display it
-@app.route("/githubinfo/<username>")
-def get_github_user(username):
+@app.route("/githubinfo", methods=["POST"])
+def get_github_user():
     # Url for getting Any valid github user
-    url = 'https://api.github.com/users/{}'.format(username)
+    post_name = request.form["username"]
+    url = 'https://api.github.com/users/{}'.format(post_name)
     response = requests.get(url)
     if response.status_code == 200:
         user_data = response.json()

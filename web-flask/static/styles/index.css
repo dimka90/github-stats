@@ -252,6 +252,18 @@ label {
     cursor: pointer;
     margin-bottom: 10px;
 }
+.user-card{
+background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    padding: 1rem;
+}
+.user-card li
+{
+    line-height: 1rem;
+}
 /* 
 media query for mobile version */
 

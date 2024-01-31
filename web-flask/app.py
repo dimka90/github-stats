@@ -21,7 +21,7 @@ def get_github_user():
                 "Bio": user_data['bio'],
                 "Followers": user_data['followers']
                 }
-        return  data
+        return  render_template("user_info.html", data = data)
     else:
         return "still processing"
 if __name__ == "__main__":

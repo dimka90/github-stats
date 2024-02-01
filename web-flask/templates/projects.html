@@ -38,15 +38,24 @@
 
 <main class="container">
 <video src="../static/video/git.mp4" autoplay muted loop></video>
-<div class="user-card">
-<img id="avatar" alt="User Avatar" src="{{ avatar_url }}">
-{% for key,value in data.items() %}
-<ul>
+<div class="project-card">
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>s/n</th>
+        <th>Project Name</th>
+        <th>Project Url</th> 
+        </tr>
+    </thead>
+    {% for project in projects %}
+    <tr class="active-row">
 
-<li> <strong>{{ key }} :</strong> {{ value }} </li>
-
-</ul>
+        <td>{{ loop.index }}</td>
+        <td> {{ project['name'] }} </td>
+        <td><a href ="{{ project['html_url'] }}"> {{ project['html_url'] }} </a> </td>
+    </tr>
 {% endfor %}
-<button id="btn-project"> <a href= "{{ url_for('get_user_projects', username= data["username"]) }}">View Projects</a> </button>
+</table>
+<button id="btn-project">View Projects</a> </button>
 </div>
 </html>

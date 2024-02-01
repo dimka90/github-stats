@@ -36,7 +36,9 @@ def get_user_projects():
     response = requests.get(base_url, headers=headers)
 
     if response.status_code == 200:
-        return response.json()
+        projects = response.json()
+
+        return render_template("projects.html", projects = projects)
     else:
         return "Still processing"
 

@@ -16,7 +16,7 @@ def get_github_user():
     if response.status_code == 200:
         user_data = response.json()
         avatar_url =  user_data.get('avatar_url', '')
-        data = {"Username" : user_data['login'],
+        data = {"username" : user_data['login'],
                 "Name": user_data["name"],
                 "Location": user_data["location"],
                 "Bio": user_data['bio'],
@@ -28,13 +28,12 @@ def get_github_user():
 @app.route("/get_user_projects", methods =["GET"])
 def get_user_projects():
     username = request.args.get("username")
-    # obtainning access token 
+    # obtainning access token
     with open("token") as file:
-        acces_token = file.read()
+        token = file.read().strip()
     base_url = f'https://api.github.com/users/{username}/repos'
-    headers  = {'Authorization': f'token {acces_token}'}
-
-    response = requests.get(base_url, headers = headers)
+    headers  = {'Authorization': 'token {}'.format(token)}
+    response = requests.get(base_url, headers=headers)
 
     if response.status_code == 200:
         return response.json()

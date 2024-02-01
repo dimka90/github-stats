@@ -39,7 +39,7 @@
 <main class="container">
 <video src="../static/video/git.mp4" autoplay muted loop></video>
 <div class="user-card">
-
+<img id="avatar" alt="User Avatar" src="{{ avatar_url }}">
 {% for key,value in data.items() %}
 <ul>
 
@@ -47,5 +47,6 @@
 
 </ul>
 {% endfor %}
+<a href= "{{ url_for('get_user_projects', username= data["username"]) }}">View Projects</a>
 </div>
 </html>

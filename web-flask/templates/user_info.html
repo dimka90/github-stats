@@ -1,41 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/styles/index.css">
-    <link rel="icon" type="image/x-icon" href="../static/images/github.png">
-
-    <script src="../static/scripts/index.js" defer></script>
-    <title>github stats</title>
-</head>
-<body>
-    <header class="header container">
-
-
-<nav class="navigation d-flex">
-
-<div class="logo-container">
-    <img src="../static/images/github.png" alt="plasu logo">
-</div>
-<button style="border: none; outline: 0px" aria-controls="primary-navigation" aria-expanded="false" class="btn-img">
-    <img src="../static/images/menu.png" alt="" class="harmburger-menu" id="harmburger-menu">
-    <!-- <img src="./images/closemenu.jpg" alt=""> -->
-    <!-- <img src="./" alt=""> -->
-</button>
-
-
-<ul class="primary-navigation  d-flex" id="primary-navigation" data-visible="false">
-    <li><a href="./index.html">Home</a></li>
-    <li><a href="#">Contact</a></li>
-    <li><a href="#">About</a></li>
-
-</ul>
-</nav>
-    </header>
-
-
+{% extends 'base.html' %}
+{% block content %}
 <main class="container">
 <video src="../static/video/git.mp4" autoplay muted loop></video>
 <div class="user-card">
@@ -49,4 +13,4 @@
 {% endfor %}
 <button id="btn-project"> <a href= "{{ url_for('get_user_projects', username= data["username"]) }}">View Projects</a> </button>
 </div>
-</html>
+{% endblock %}

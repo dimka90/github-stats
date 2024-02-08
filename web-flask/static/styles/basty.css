@@ -1,0 +1,20 @@
+p{
+    color:red;
+    font-size: 2em;
+    font-weight: bold;
+}
+.second
+{
+    color: green;
+}
+.parent
+
+{
+    background-color: black;
+   
+    flex-direction: row;
+}
+.d-flex
+{
+    display: flex;
+}

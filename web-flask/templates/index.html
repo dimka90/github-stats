@@ -1,74 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/styles/index.css">
-    <link rel="icon" type="image/x-icon" href="../static/images/github.png">
-
-    <script src="../static/scripts/index.js" defer></script>
-    <title>github stats</title>
-</head>
-<body>
-    <header class="header container">
-
-
-<nav class="navigation d-flex">
-
-<div class="logo-container">
-    <img src="../static/images/github.png" alt="plasu logo">
-</div>
-<button style="border: none; outline: 0px" aria-controls="primary-navigation" aria-expanded="false" class="btn-img">
-    <img src="../static/images/menu.png" alt="" class="harmburger-menu" id="harmburger-menu">
-    <!-- <img src="./images/closemenu.jpg" alt=""> -->
-    <!-- <img src="./" alt=""> -->
-</button>
-
-
-<ul class="primary-navigation  d-flex" id="primary-navigation" data-visible="false">
-    <li><a href="./templates/index.html">Home</a></li>
-    <li><a href="#">Contact</a></li>
-    <li><a href="#">About</a></li>
-    
-</ul>
-</nav>
-    </header>
-
-    <main class="container">
-<video src="../static/video/git.mp4" autoplay muted loop></video> 
-<div class="main-section">
-    
-<div class="big-form">
-    <h1 class="white project-title ">View Your <span class="gray">github</span> stats and<br> Projects with ease..</h1>
-<div class="d-flex form-frame">
-    <div class="instruction">
-    <h2 class="greetings">Welcome to github stats!</h2>
-    
-        <p>Discover the power of your GitHub profile with our personalized statistics and insights. Whether you're a seasoned developer or just starting your coding journey, our platform provides you with a unique overview of your GitHub activity.</p>
-    </div>
-    <div class="form">
-      
-        <p> Simply enter your GitHub username below, and let us unveil fascinating details about your repositories, contributions, and more</p>
-        <form action="/githubinfo" method="post">
-            <div>
-                <label>username</label>
-                <input type="text" name="username" placeholder="githubusername" required>
-            </div>
+{% extends 'base.html' %}
+{% block content %}
+<main class="container">
+    <video src="../static/video/git.mp4" autoplay muted loop></video> 
+    <div class="main-section">
         
+    <div class="big-form">
+        <h1 class="white project-title ">View Your <span class="gray">github</span> stats and<br> Projects with ease..</h1>
+    <div class="d-flex form-frame">
+        <div class="instruction">
+        <h2 class="greetings">Welcome to github stats!</h2>
+        
+            <p>Discover the power of your GitHub profile with our personalized statistics and insights. Whether you're a seasoned developer or just starting your coding journey, our platform provides you with a unique overview of your GitHub activity.</p>
+        </div>
+        <div class="form">
+          
+            <p> Simply enter your GitHub username below, and let us unveil fascinating details about your repositories, contributions, and more</p>
+            <form action="/githubinfo" method="post">
+                <div>
+                    <label>username</label>
+                    <input type="text" name="username" placeholder="githubusername" required>
+                </div>
+            
+        <div>
+            <button type="submit">
+                View Stats
+            </button>
+        </div>
+            
+        </div>
+    </form>
+    </div>
+    </div>
     <div>
-        <button type="submit">
-            View Stats
-        </button>
     </div>
-        
-    </div>
-</form>
-</div>
-</div>
-<div>
-</div>
+    
+        </main>
 
-    </main>
-</body>
-</html>
+        {% endblock %}

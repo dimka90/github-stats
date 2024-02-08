@@ -4,7 +4,7 @@ app = Flask(__name__)
 # Route for index page
 @app.route("/")
 def index():
-     return render_template("base.html")
+     return render_template("index.html")
 # This route gets the user information using the github api
 # to display it
 @app.route("/githubinfo", methods=["POST"])

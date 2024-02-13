@@ -10,6 +10,7 @@ body{
     /* background-repeat: no-repeat;
     background-size: cover;
     height: 100vh; */
+   
     
 
 }
@@ -23,6 +24,7 @@ color:black;
     width:80%;
     max-width: 1500px;
     margin: 0px auto;
+    
 }
 
 /* utlity class */
@@ -128,7 +130,7 @@ z-index: 3;
 height:400px;
 width:100%;
 background-color:blue;
-
+margin-bottom: 5em;
 }
 main::before{
 content: ' ';
@@ -202,7 +204,7 @@ input{
 
 }
 button {
-    background-color:  #007BFF;
+    background-color:   #11182A;
     color: #fff;
     padding: 10px;
     border: none;
@@ -219,6 +221,7 @@ label {
     font-size: 1.4rem;
     color: #555;
 }
+
 .instruction,
 .form{
 
@@ -243,7 +246,7 @@ label {
 }
 .greetings
 {
-    background-color:  #007BFF;
+    background-color:    #007BFF;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -343,6 +346,73 @@ table tbody tr:last-of-type {
     border-bottom: 2px solid #007BFF;
 }
 
+.bg_white
+{
+    background-color: white;
+    height: 200px;
+}
+.about_us{
+   
+    background-color: #11182A;
+}
+.col
+{
+   
+    box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width:42%;
+    padding-left: 2em;
+    padding-right: 2em;
+    background-color: #fff;
+    margin:0px 2em;
+    margin-bottom: 2em;
+}
+.user_image
+{
+    width: 8rem;
+    height: 8rem;
+margin: 0px auto;
+padding-top: 1em;
+padding-bottom: 1em;
+ 
+}
+.space-between
+{
+    justify-content: space-between;
+}
+.user_image img
+{
+    border-radius: 100px;
+}
+.pd_top_bottom
+{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.about_us--container
+{
+    background-color: #11182A;
+  
+
+}
+.about_title
+{
+    color:white;
+    
+    width: 6em;
+    padding: 1em;
+    margin: 0px auto;
+    border-radius: 50px;
+}
+
+.about_title + p{
+    color:white;
+
+}
+.about_us--intro
+{
+   
+    margin-bottom: 1em;
+}
 /* 
 media query for mobile version */
 
@@ -352,7 +422,7 @@ media query for mobile version */
         transform:rotate(360deg);
     }
         
-    }
+}
     
     .container{
         width: 100%;
@@ -439,12 +509,12 @@ padding-bottom: 0px;
    
     justify-content: start;
 }
+
 .user-card
 {
 	width:75%;
 	left:5%;
 	right:5%;
-	background-color:green;
 }
 .project-card{
      border-radius: 5px;
@@ -452,8 +522,28 @@ padding-bottom: 0px;
      padding: 1rem;
      position:absolute;
      margin-top:3em;
+}
 table
 {
 	 
+
+}
+.bg_white
+{
+    height: 34em;
+}
+.about_us--container
+{
+    flex-direction: column;
+    background-color: #11182A;
+
+}
+
+.col{
+    width: 65%;
+    margin: 0px auto;
+    margin-bottom: 1em;
+    border-radius: 10px;
+}
 
 }

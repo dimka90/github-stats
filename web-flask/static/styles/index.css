@@ -366,6 +366,11 @@ table tbody tr:last-of-type {
     margin:0px 4em;
     margin-bottom: 5em;
     border-radius: 10px;
+   transition: 200ms;
+}
+.col:hover
+{
+    scale: 1.1;
 }
 .user_image
 {
@@ -454,7 +459,8 @@ padding-bottom: 1em;
     color:#11182A;
     font-family: Roboto;
 }
-.col:hover{
+.fa-brands{
+    transition: 200ms;
 }
 .fa-brands:hover
 {
@@ -591,6 +597,7 @@ table
     margin: 0px auto;
     margin-bottom: 1em;
     border-radius: 10px;
+    transition: 200ms;
 }
 
 }

@@ -359,12 +359,13 @@ table tbody tr:last-of-type {
 {
    
     box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    width:42%;
+    width:38%;
     padding-left: 2em;
     padding-right: 2em;
     background-color: #fff;
-    margin:0px 2em;
-    margin-bottom: 2em;
+    margin:0px 4em;
+    margin-bottom: 5em;
+    border-radius: 10px;
 }
 .user_image
 {
@@ -412,6 +413,52 @@ padding-bottom: 1em;
 {
    
     margin-bottom: 1em;
+}
+.link__up
+{
+  
+    justify-content: space-between;
+    width: 50%;
+    margin: 0px auto;
+    margin-top: 1em;
+    padding-bottom: 1em;
+}
+.our_logo
+{
+}
+.fa-brands 
+{
+    font-size: 2em;
+}
+.fa-whatsapp
+{
+    color:green;
+}
+.fa-github
+{
+    color:#11182A;
+}
+.fa-twitter{
+    color: blue;
+}
+.fa-facebook{
+    color: blue;
+}
+.footer
+{
+    box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#11182A;
+    font-family: Roboto;
+}
+.col:hover{
+}
+.fa-brands:hover
+{
+    scale: 1.2;
 }
 /* 
 media query for mobile version */

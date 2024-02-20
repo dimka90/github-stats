@@ -4,13 +4,17 @@ margin:0px;
 
 padding: 0px;
 }
+a{
+    cursor: pointer;
+}
+
 
 body{
     /* background-image: url('/images/HeroImage.png'); */
     /* background-repeat: no-repeat;
     background-size: cover;
     height: 100vh; */
-   
+    font-family: "Roboto Flex", sans-serif;
     
 
 }
@@ -370,7 +374,15 @@ table tbody tr:last-of-type {
 }
 .col:hover
 {
-    scale: 1.1;
+    
+}
+.col p
+{
+    color: #555;
+    font-size: 2rem;
+    font-size: 1.5rem;
+    text-align: justify;
+
 }
 .user_image
 {
@@ -430,6 +442,10 @@ padding-bottom: 1em;
 }
 .our_logo
 {
+}
+.our_logo h2
+{
+    font-size: 2em;
 }
 .fa-brands 
 {

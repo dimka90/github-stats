@@ -16,10 +16,11 @@
         
                 <p>Discover the power of your GitHub profile with our personalized statistics and insights. Whether you're a seasoned developer or just starting your coding journey, our platform provides you with a unique overview of your GitHub activity.</p>
             </div>
+        
             {% with messages = get_flashed_messages()  %}
             {% if messages %}
             {% for message in messages %}
-            <p> {{ message}} </p>
+            <p class="errors" id="error" > {{ message}} </p>
             {% endfor %}
             {% endif %}
             {% endwith %}

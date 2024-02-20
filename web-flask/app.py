@@ -13,7 +13,6 @@ def index():
     Return:
           html
     """
-    flash("Coding is really fun")
     return render_template("index.html")
 
 
@@ -28,23 +27,31 @@ def get_github_user():
     post_name = request.form["username"]
     # url for getting a specific github username
     url = 'https://api.github.com/users/{}'.format(post_name)
-    response = requests.get(url)
-    # checking if it was a success
-    if response.status_code == 200:
-        #converting it to python objects
-        user_data = response.json()
-        #extracting each user image
-        avatar_url =  user_data.get('avatar_url', '')
-        # Extracting the return values from the api and storing in a dictionary
-        data = {"username" : user_data['login'],
-                "Name": user_data["name"],
-                "Location": user_data["location"],
-                "Bio": user_data['bio'],
-                "Followers": user_data['followers'],
-                }
-        return  render_template("user_info.html", data = data, avatar_url = avatar_url)
-    else:
-        return "still processing"
+    try:
+        response = requests.get(url)
+        # checking if it was a success
+        if response.status_code == 200:
+            #converting it to python objects
+            user_data = response.json()
+               
+            #extracting each user image
+            avatar_url =  user_data.get('avatar_url', '')
+            # Extracting the return values from the api and storing in a dictionary
+            data = {"username" : user_data['login'],
+                    "Name": user_data["name"],
+                    "Location": user_data["location"],
+                    "Bio": user_data['bio'],
+                    "Followers": user_data['followers'],
+                    }
+            return  render_template("user_info.html", data = data, avatar_url = avatar_url)
+        else:
+            flash("{} oops, is not on Github".format(post_name))
+            return render_template("index.html")
+
+    except requests.exceptions.RequestException as e:
+        flash("You are offline")
+        return render_template("index.html")
+  
 
 
 @app.route("/get_user_projects", methods =["GET"])

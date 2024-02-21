@@ -23,7 +23,7 @@ Follow these steps to set up the GitHub Stats project locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/github-stats.git
+git clone https://github.com/dimka90/github-stats.git
 
 # Navigate to the project directory
 cd github-stats
